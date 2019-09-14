@@ -1,8 +1,9 @@
+import actionTypes from './actionTypes';
 export const successEvents = (payload) => ({
-    type: 'FETCH_EVENTS_SUCCESS',
+    type: actionTypes.FETCH_EVENTS_SUCCESS,
     payload
 })
 
 export const failureEvents = () => ({
-    type: 'FETCH_EVENTS_FAILURE',
+    type: actionTypes.FETCH_EVENTS_FAILURE,
 })

@@ -13,7 +13,7 @@ export const gallery = (state = initialGalleryState, action) => {
     }
 }
 
-export const IsFetchingGallery = (state = initialIsFetchingGallery, action) => {
+export const isFetchingGallery = (state = initialIsFetchingGallery, action) => {
     switch (action.type) {
         case 'API_CALL_FOR_GALLERY':
             return true

@@ -7,7 +7,7 @@ import Contact from './components/Contact/Contact';
 import Sponsors from './components/Sponsors/Sponsors';
 import User from './components/User/User';
 import LoggedIn from './LoggedIn';		
-import NotFound from './components/NotFound/NotFound'
+import Error404 from './components/Error404/Error404'
 
 
 class App extends Component {
@@ -25,7 +25,7 @@ class App extends Component {
 						<LoggedIn path="/about" component={AboutUs} />
 						<LoggedIn path="/sponsors" component={Sponsors} />
 						<LoggedIn path="/user" component={User} /> 
-						<LoggedIn component = {NotFound} />
+						<LoggedIn component = {Error404} />
 					</Switch>
 				</BrowserRouter>
 			</div>
