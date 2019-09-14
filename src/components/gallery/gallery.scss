@@ -1,0 +1,125 @@
+#gallerySlider{
+    overflow: hidden;
+    position: relative;
+
+
+    .galleryGrid{
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        position: relative;
+        width:1000%;
+        left:0;
+        margin:0;
+        // animation-name: slideAnimation;
+        // animation-duration: 15s;
+        // animation-iteration-count: infinite;
+        background-color: #485461;
+        background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+        transition: 2s ease-in-out;
+        overflow: hidden;
+    }
+}
+
+.galleryGridComm{
+    text-align: center;
+    transition: 0.5s ease-in-out;
+
+    .topText{
+        color:white;
+        position: absolute;
+        top:20px;
+        z-index: 0;
+        font-size: 3rem;
+    }
+
+    .bottomText{
+        color:white;
+        position: absolute;
+        z-index: 0;
+        top:90%;
+        right: 2vh;
+        font-size: 3rem;
+    }
+
+
+    img{
+        width: 100%;
+        height: 85vh;
+        filter: grayscale(0%);
+        position: relative;
+        z-index:1;
+        transition: 1s cubic-bezier(0.215, 0.610, 0.355, 1);
+        border-radius:10px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+
+.galleryGridComm:hover{
+    img{
+        filter: grayscale(60%);
+        clip-path: polygon(40% 0, 100% 0, 58% 100%, 0% 100%);
+        //transition: 1s cubic-bezier(0.215, 0.610, 0.355, 1);
+        //clip-path: polygon(40% 0, 100% 0, 100% 100%, 0 100%, 0 40%);
+    }
+}
+
+/*---------------------------Arrows-----------------------*/
+.arrowLeft{
+    width:50px;
+    height: 50px;
+    position: absolute;
+    z-index: 2;
+    top:46.5%;
+    left:20px;
+    cursor:pointer;
+    background-color: lightgray;
+    margin:0;
+    padding:0;
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+}
+
+.arrowRight{
+    width:50px;
+    height: 50px;
+    position: absolute;
+    z-index: 2;
+    top:46.5%;
+    right:20px;
+    cursor:pointer;
+    background-color: lightgray;
+    margin:0;
+    padding:0;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+/*--------------------------------------------------------*/
+
+
+// @keyframes slideAnimation{
+//     0%{
+//         left:0;
+//     }
+//     20%{
+//         left:0;
+//     }
+//     25%{
+//         left: -100%;
+//     }
+//     45%{
+//         left:-100%;
+//     }
+//     50%{
+//         left:-200%;
+//     }
+//     70%{
+//         left:-200%;
+//     }
+//     75%{
+//         left:-300%;
+//     }
+//     95%{
+//         left:-300%;
+//     }
+//     100%{
+//         left: -400%;
+//     }
+// }
