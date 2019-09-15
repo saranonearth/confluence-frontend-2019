@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-export default class Sponsor extends Component {
+export default class ThirdPage extends Component {
     render() {
         return (
             <div>
-                Hi there
+                <p>Hi there</p>
             </div>
         )
     }

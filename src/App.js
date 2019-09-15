@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { Switch, BrowserRouter/*, Route, Link*/ } from 'react-router-dom';
 
-//import HomePage from './components/HomePage/HomePage';
-//import LoggedIn from './LoggedIn';	
-import Gallery from './components/gallery/Gallery'
+// import HomePage from './components/HomePage/HomePage';
+// import LoggedIn from './LoggedIn';	
+//import Gallery from './components/gallery/Gallery'
+import Event from './components/events/Event'
+import 'materialize-css/dist/css/materialize.min.css';
 
 class App extends Component {
 
@@ -22,7 +24,8 @@ class App extends Component {
 						<LoggedIn path="/aboutUs" component={AboutUs} />
 						<LoggedIn path="/sponsors" component={Sponsers} />
 						<LoggedIn path="/user" component={User} /> */}
-						<Gallery path="/gallery/Gallery" component={Gallery} />
+						{/* <Gallery path="/gallery/Gallery" component={Gallery} /> */}
+						<Event />
 					
 					</div>
 
