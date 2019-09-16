@@ -1,11 +1,10 @@
-import actionTypes from './actionTypes';
-export const login = (uid) => ({
-    type: actionTypes.LOGIN,
-    uid
-});
+import actionTypes from './actionTypes'
 
-export const logout = () => ({
-    type: actionTypes.LOGOUT
-});
 
-//FOR STARTLOGOUT AND STARTLOGIN TO BE ADDED DEPENDING ON AUTH PROVIDER
+export const login = (dispatch) => {
+
+    // dispatch({
+    //     type: actionTypes.LOGIN
+    // })
+
+}

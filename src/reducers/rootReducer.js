@@ -1,14 +1,13 @@
-import {combineReducers} from 'redux'
-import { gallery,  isFetchingGallery } from './gallery'
-import { events, isFetchingEvents } from './events'
-import auth from './user'
+import actionTypes from '../actions/actionTypes';
 
-const rootReducer = combineReducers(
-    gallery,
-    events,
-    isFetchingEvents,
-    isFetchingGallery,
-    auth
-)
+export default function rootReducer(state, action) {
+    const {
+        type,
+        payload
+    } = action;
 
-export default rootReducer
+    switch (type) {
+        default:
+            return state
+    }
+}
