@@ -17,48 +17,6 @@ class TeamConflu extends Component {
         }   
     }
 
-	mouseEnterAnim = (index) => {
-		const hoverTarget = '.card'+index, imgTarget = '.img'+index, img= document.querySelector(imgTarget);
-
-
-		img.style.transition = "100ms";
-		img.style.transform = "scale(1.15)";
-	
-		anime.remove(hoverTarget);
-		anime({
-			targets: hoverTarget,
-			scale: 1.07,
-		})
-		anime.remove(imgTarget);
-		anime({
-			targets: imgTarget,
-			duration: 500,
-			rotate : "1turn",
-			easing :"easeInOutCubic"
-		})
-	}
-	
-	mouseLeaveAnim = (index) => {
-		const hoverTarget = [ ('.card'+index), '.show'], imgTarget = '.img'+index, img = document.querySelector(imgTarget);
-
-		img.style.transition = "100ms";
-		img.style.transform = "scale(1)";
-
-		anime.remove(hoverTarget);
-		anime({
-			targets: hoverTarget,
-			scale:1
-		});
-		anime.remove(imgTarget);
-		anime({
-			targets: imgTarget,
-			duration: 200,
-			rotate: "1turn",
-			direction : "reverse",
-			easing :"easeInOutCubic"
-		});
-	}
-
 	render() {
         if(this.state.team.length === 0){
             return (
