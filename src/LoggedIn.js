@@ -11,6 +11,7 @@ const LoggedIn = ({ component: Component, ...rest }) => (
 
 				{/* <Nav /> */}
 				<Component {...matchProps} />
+				
 			</div>
 		)}
 	/>

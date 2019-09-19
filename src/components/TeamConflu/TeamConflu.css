@@ -1,0 +1,121 @@
+.confluTeamBody{
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' %3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%2380F'/%3E%3Cstop offset='1' stop-color='%23f40'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpattern id='b' width='24' height='24' patternUnits='userSpaceOnUse'%3E%3Ccircle fill='%23ffffff' cx='12' cy='12' r='12'/%3E%3C/pattern%3E%3Crect width='100%25' height='100%25' fill='url(%23a)'/%3E%3Crect width='100%25' height='100%25' fill='url(%23b)' fill-opacity='0.1'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    color:#fff;
+    width:100%;
+    height:100%;
+    overflow: hidden;
+}
+.card{
+    background: #868282;
+    text-align: center;
+    border-radius: 10px;
+    color:#fff;
+    font-weight: bold;
+}
+
+.card .show{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height:40%;
+    width:100%;
+    display: block;
+    position: absolute;
+
+}
+.card img{
+    position: relative;
+    max-width:70%;
+    border:2px solid #fff;
+    border-radius:50%;
+}
+
+.social{
+    font-size:20px;
+}
+.social *{
+    margin:2px;
+}
+
+
+.fa-whatsapp{
+    color:rgb(3, 250, 94);
+    transition:200ms;
+}
+.fa-whatsapp:hover{
+    transform: scale(1.07);
+    padding:0 5px 0 5px;
+}
+
+
+
+.fa-facebook{
+    color:#2954b1;
+    transition:200ms;
+}
+.fa-facebook:hover{
+    transform: scale(1.07);
+    padding:0 5px 0 5px;
+}
+
+
+.fa-instagram{
+    color:#e72548;
+    transition:200ms;
+}
+.fa-instagram:hover{
+    transform: scale(1.07);
+    padding:0 5px 0 5px;
+}
+
+
+.fa-linkedin{
+    color:rgb(0, 135, 207);
+    transition:200ms;
+}
+.fa-linkedin:hover{
+    transform: scale(1.07);
+    padding:0 5px 0 5px;
+}
+
+
+.fa-twitter{
+    color:#55acee;
+    transition:200ms;
+}
+.fa-twitter:hover{
+    transform: scale(1.07);
+    padding:0 5px 0 5px;
+}
+
+
+.fa-quora{
+    color:#b92b27;
+    transition:200ms;
+}
+.fa-quora:hover{
+    transform: scale(1.07);
+    padding:0 5px 0 5px;
+}
+
+
+.fa-snapchat{
+    color:#FFFC00;
+    transition:200ms;
+}
+.fa-snapchat:hover{
+    transform: scale(1.07);
+    padding:0 5px 0 5px;
+}
+
+
+.fa-github{
+    color:#333;
+    transition:200ms;
+}
+.fa-github:hover{
+    transform: scale(1.07);
+    padding:0 5px 0 5px;
+}
