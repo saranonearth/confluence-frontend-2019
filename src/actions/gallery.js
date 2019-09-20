@@ -1,10 +1,13 @@
 import actionTypes from './actionTypes';
 
-export const successGallery = (payload) => ({
-    type: actionTypes.FETCH_GALLERY_SUCCESS,
-    payload
-})
+//actions using dispatch 
 
-export const failureGallery = () => ({
-    type: actionTypes.FETCH_GALLERY_FAILURE,
-})
+
+//example:
+// export const login = (dispatch) => {
+
+//     dispatch({
+//         type: actionTypes.LOGIN
+//     })
+
+// }
