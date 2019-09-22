@@ -10,8 +10,6 @@ import LoggedIn from './LoggedIn';
 import Error404 from './components/Error404/Error404';
 import Store from './store/store';
 import rootReducer from './reducers/rootReducer';
-import TeamConlfu from './components/TeamConflu/TeamConflu'
-import TeamConflu from './components/TeamConflu/TeamConflu';
 
 const App = () => {
   const initState = useContext(Store);
@@ -28,7 +26,6 @@ const App = () => {
             <LoggedIn path='/guestlectures' component={Guests} />
             <LoggedIn path='/contact' component={Contact} />
             <LoggedIn path='/about' component={AboutUs} />
-            <LoggedIn path='/teamConflu' component={TeamConflu} />
             <LoggedIn path='/sponsors' component={Sponsors} />
             <LoggedIn path='/user' component={User} />
             <LoggedIn component={Error404} />
