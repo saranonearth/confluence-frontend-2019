@@ -10,8 +10,6 @@ import LoggedIn from './LoggedIn';
 import Error404 from './components/Error404/Error404';
 import Store from './store/store';
 import rootReducer from './reducers/rootReducer';
-import Categories from './components/Events/Categories';
-import Event from './components/Events/Event';
 import Gallery from './components/Gallery/Gallery';
 
 const App = () => {
