@@ -10,7 +10,7 @@ import LoggedIn from './LoggedIn';
 import Error404 from './components/Error404/Error404';
 import Store from './store/store';
 import rootReducer from './reducers/rootReducer';
-import Categories from './components/Events/Categories';
+import Gallery from './components/Gallery/Gallery';
 
 const App = () => {
   const initState = useContext(Store);
@@ -26,7 +26,7 @@ const App = () => {
             {/* <LoggedIn path="/events/:category" component={Events} /> */}
             <LoggedIn path='/guestlectures' component={Guests} />
             <LoggedIn path='/contact' component={Contact} />
-            <LoggedIn path='/categories' component={Categories} />
+            <LoggedIn path='/categories' component={Gallery} />
             <LoggedIn path='/about' component={AboutUs} />
             <LoggedIn path='/sponsors' component={Sponsors} />
             <LoggedIn path='/user' component={User} />
