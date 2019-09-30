@@ -1,5 +1,3 @@
-import actionTypes from './actionTypes';
-
 //actions using dispatch 
 
 
