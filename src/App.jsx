@@ -31,6 +31,7 @@ const App = () => {
             <Route path='/developers' component={Developers} />
             <Route path='/notautorized' component={NotAuth} />
             <Route component={Error404} />
+
           </Switch>
         </BrowserRouter>
       </Store.Provider>
