@@ -10,6 +10,8 @@ import Store from './store/store';
 import rootReducer from './reducers/rootReducer';
 import Categories from './components/Events/Categories';
 import Team from './components/utils/Team';
+import NotAuth from './components/utils/NotAuth';
+import ProtectedRoute from './components/utils/ProtectedRoute';
 const App = () => {
   const initState = useContext(Store);
   const [state, dispatch] = useReducer(rootReducer, initState);
@@ -22,9 +24,10 @@ const App = () => {
             <Route exact path='/' component={HomePage} />
             <Route path='/guestlectures' component={Guests} />
             <Route path='/contact' component={Team} />
-            <Route path='/categories' component={Categories} />
+            <ProtectedRoute path='/categories' component={Categories} />
             <Route path='/sponsors' component={Sponsors} />
             <Route path='/developers' component={Developers} />
+            <Route path='/notautorized' component={NotAuth} />
             <Route component={Error404} />
           </Switch>
         </BrowserRouter>
