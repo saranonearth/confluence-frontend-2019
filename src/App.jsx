@@ -26,6 +26,7 @@ const App = () => {
             {/* <LoggedIn path="/events/:category" component={Events} /> */}
             <LoggedIn path='/guestlectures' component={Guests} />
             <LoggedIn path='/contact' component={Contact} />
+            <LoggedIn path='/developer' component={Developer} />
             <LoggedIn path='/categories' component={Gallery} />
             <LoggedIn path='/about' component={AboutUs} />
             <LoggedIn path='/sponsors' component={Sponsors} />
