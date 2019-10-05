@@ -12,6 +12,7 @@ import Categories from './components/Events/Categories';
 import Team from './components/utils/Team';
 import NotAuth from './components/utils/NotAuth';
 import ProtectedRoute from './components/utils/ProtectedRoute';
+
 const App = () => {
   const initState = useContext(Store);
   const [state, dispatch] = useReducer(rootReducer, initState);
@@ -21,6 +22,7 @@ const App = () => {
       <Store.Provider value={{ state, dispatch }}>
         <BrowserRouter>
           <Switch>
+
             <Route exact path='/' component={HomePage} />
             <Route path='/guestlectures' component={Guests} />
             <Route path='/contact' component={Team} />
