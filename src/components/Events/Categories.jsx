@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Nav from '../utils/Nav';
-import Tape from '../../tape1.png';
-import Cassete from '../utils/Cassete';
+import Tape from '../../tapenew.png';
 const Categories = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
