@@ -30,11 +30,15 @@ const Categories = () => {
         </div>
 
         <div className='content'>
-          {data.map(e => (
-            <div className='cat-div'>
-              <img className='tape' src={Tape} alt='tape' />
-            </div>
-          ))}
+          {data.length == 0 ? (
+            <p>loading</p>
+          ) : (
+            data.map(e => (
+              <div className='cat-div'>
+                <img className='tape' src={Tape} alt='tape' />
+              </div>
+            ))
+          )}
         </div>
       </div>
     </>
