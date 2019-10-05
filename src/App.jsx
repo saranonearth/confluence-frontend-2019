@@ -1,17 +1,15 @@
 import React, { useContext, useReducer } from 'react';
-import { Switch, BrowserRouter } from 'react-router-dom';
+import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import HomePage from './components/HomePage/HomePage';
-import AboutUs from './components/AboutUs/AboutUs';
+import Developers from './components/utils/Developers';
 import Guests from './components/Guests/Guests';
 import Contact from './components/Contact/Contact';
 import Sponsors from './components/Sponsors/Sponsors';
-import User from './components/User/User';
-import LoggedIn from './LoggedIn';
 import Error404 from './components/Error404/Error404';
 import Store from './store/store';
 import rootReducer from './reducers/rootReducer';
 import Categories from './components/Events/Categories';
-
+import Team from './components/utils/Team';
 const App = () => {
   const initState = useContext(Store);
   const [state, dispatch] = useReducer(rootReducer, initState);
@@ -21,16 +19,13 @@ const App = () => {
       <Store.Provider value={{ state, dispatch }}>
         <BrowserRouter>
           <Switch>
-            {/* <Route path="/onBoarding" component={OnBoarding} /> */}
-            <LoggedIn exact path='/' component={HomePage} />
-            {/* <LoggedIn path="/events/:category" component={Events} /> */}
-            <LoggedIn path='/guestlectures' component={Guests} />
-            <LoggedIn path='/contact' component={Contact} />
-            <LoggedIn path='/categories' component={Categories} />
-            <LoggedIn path='/about' component={AboutUs} />
-            <LoggedIn path='/sponsors' component={Sponsors} />
-            <LoggedIn path='/user' component={User} />
-            <LoggedIn component={Error404} />
+            <Route exact path='/' component={HomePage} />
+            <Route path='/guestlectures' component={Guests} />
+            <Route path='/contact' component={Team} />
+            <Route path='/categories' component={Categories} />
+            <Route path='/sponsors' component={Sponsors} />
+            <Route path='/developers' component={Developers} />
+            <Route component={Error404} />
           </Switch>
         </BrowserRouter>
       </Store.Provider>
