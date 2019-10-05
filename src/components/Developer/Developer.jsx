@@ -31,10 +31,12 @@ class Card extends React.Component{
 const Developer = () => {
   return (
     <>
-    <div className="heading"><img src="DevelopersText_1.svg" alt="" /></div>
+    <div className="heading"><img className="title" src="DevelopersText_1.svg" alt="" /></div>
+    <div className="contain">
     <div className="cards">
         <Card />    
       </div> 
+     </div> 
       
     </>
   );

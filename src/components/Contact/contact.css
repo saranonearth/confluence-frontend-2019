@@ -1,5 +1,5 @@
-body{
-    background: url(TeamConfluBG.svg);
+.contain{
+    background: url(teamConflu.png);
     background-size: 100%;
     background-attachment: fixed;
   
@@ -10,11 +10,12 @@ body{
     flex-wrap: wrap;
 justify-content: center;
     width: 67%;
+    margin-left: -2%;
 
 }
 .card{
-    width: 25.7vw;
-    height: 25.7vw;
+    width: 20.7vw;
+    height: 20.7vw;
     margin: 30px;
     
     background-color: #fff;
@@ -22,12 +23,7 @@ justify-content: center;
     overflow: hidden;
     border-radius: 20px;
 }
-@media only screen and (max-width: 600px){
-    .card{
-        width: 60vw;
-        height: 60vw;
-    }
-}
+
 .image{
     width: 100%;
     height: 100%;
@@ -88,4 +84,34 @@ justify-content: center;
     transform: translateX(-50%); 
       */
      
+}
+.title{
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+@media only screen and (max-width: 600px){
+    .contain{
+       
+        background-size: cover;
+        background-position: bottom right;
+    }
+    .cards{
+        margin-left: 15%;
+    }
+    .card{
+        width: 60vw;
+        height: 47.3vw;
+    }
+    
+    .heading{
+        width: 90%;
+    }
+    .title{
+        margin-left: 5%;
+        margin-top: 8%;
+    }
+    .top h1{
+        font-size: 25px;
+    }
 }

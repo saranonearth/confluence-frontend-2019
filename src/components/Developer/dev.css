@@ -1,9 +1,10 @@
-body{
-    background: url(DevelopersBG.svg);
+.contain{
+    background: url(developerPage.png);
     background-size: 100%;
     margin: 0;
     padding: 0;
     background-attachment: fixed;
+    background-repeat: no-repeat;
 
 }
 
@@ -12,12 +13,14 @@ body{
     width: 67%;
     flex-wrap: wrap;
     justify-content: center;
+    margin-left: -3%;
+    
     
 }
 .card{
     background-color: white;
-    height: 310px;
-    width: 310px;
+    height: 250px;
+    width: 250px;
     position: relative;
     margin: 30px;
     margin-top: 100px;
@@ -42,7 +45,7 @@ body{
     letter-spacing: 2px;
     font-weight: 600;
     font-family: 'Raleway', sans-serif;
-    top: 150px;
+    top: 105px;
     
     text-align: center;
     
@@ -51,7 +54,7 @@ body{
 .prof{
     font-size: 25px;
     position: relative;
-    top: 160px;
+    top: 115px;
     text-align: center;
 
 
@@ -61,26 +64,18 @@ body{
     height: 1.5px;
     width: 50px;
     position: relative;
-    top: 170px;
+    top: 120px;
     left: 50%;
     transform: translateX(-50%);
 
 }
-.bio{
-    position: absolute;
-    top: 220px;
-    color: #959495;
-    text-align: center;
-    font-size: 18px;
-    font-family: 'Work Sans', sans-serif;
-    line-height: 28px;
-}
+
 .photo{
     height: 100%;
     width: 100%;
     
     position: relative;
-    bottom: 32.5%;
+    bottom: 42%;
     background-size: 100% 100%;
    
     transition: 1s;
@@ -100,18 +95,71 @@ body{
 }
 .git-icon{
     position: relative;
-    top: 190px;
+    top: 130px;
     font-size: 32px;
     text-align: center;
 }
 .heading{
     width: 60%;
-    margin-top: 10px;
-    margin-left: 10px;
+    
+    margin-left: 5%;
+    margin-top: 2%;
 }
 .image{
-    height: 310px;
-    width: 310px;
+    height: 250px;
+    width: 250px;
     border-radius: 8px;
     transition: 1s;
 }
+.title{
+    margin-top: 5%;
+   
+}
+@media only screen and (max-width: 600px){
+    .contain{
+        
+        background-size: cover;
+        background-position: bottom right;
+     }
+    .cards{
+        justify-content: center;
+        margin-left: 15%; 
+    }
+    .card{
+        width: 60vw;
+        height: 60vw;
+    }
+    .image{
+        width: 60vw;
+        height: 60vw;
+    }
+    .photo{
+        position: relative;
+    bottom: 48%;
+    }
+    .git-icon{
+        top:110px;
+    }
+    .divider{
+        top: 105px;
+    }
+    .prof{
+        top:98px;
+    }
+    .name{
+        top:90px;
+    }
+    .card:hover .image{
+    transform: scale(0.7) translateY(-170px);
+    }
+    .heading{
+        width: 80%;
+       margin-left: 10%;
+      margin-top: 0%;
+    }
+    .title{
+        margin-top: 10%;
+       
+    }
+}
+   

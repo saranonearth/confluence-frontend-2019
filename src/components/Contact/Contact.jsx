@@ -28,10 +28,11 @@ class Card extends React.Component{
 
 const Contact = () => {
   return (
-    <>
-       <div className="heading"><img src="TeamConfluText.svg" /></div>
+    <><div className="contain">
+       <div className="heading"><img className="title" src="TeamConfluText.svg" /></div>
       <div className="cards">
         <Card />    
+      </div>
       </div> 
     </>
   );
