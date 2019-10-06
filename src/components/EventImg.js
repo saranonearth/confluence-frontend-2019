@@ -1,4 +1,4 @@
-export const images = [{
+export const List = [{
         eventName: 'Arts',
         img: 'https://firebasestorage.googleapis.com/v0/b/hardy-mercury-229210.appspot.com/o/3.png?alt=media&token=593a6bbc-ea49-4907-88f0-730b2a0bfb4e'
     },

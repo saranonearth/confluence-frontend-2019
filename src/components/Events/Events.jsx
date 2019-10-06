@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from 'react';
+import Nav from '../utils/Nav';
 import axios from 'axios';
+import config from '../../config.json';
+import { Link } from 'react-router-dom';
 const Events = props => {
+  const category = props.match.params.category;
   const [data, setData] = useState([]);
   useEffect(() => {
+    window.scrollTo(0, 0);
     const getEvents = async () => {
       try {
         const res = await axios.get(
-          'http://confluence-backend.appspot.com/api/events/desc/'
+          `${config.BASE}/events/name/?category=${category}`
         );
 
         setData([...res.data.data]);
@@ -16,14 +21,32 @@ const Events = props => {
     };
     getEvents();
   }, []);
-  const category = props.match.params.category;
+
   console.log(data);
 
-  const Events = data && data.find(e => e.name === category);
-  // console.log(Events);
+  // const Events = data && data.find(e => e.name === category);
+
   return (
-    <div></div>
-    // <div>{Events.events && Events.events.map((e, i) => <h1>e.name</h1>)}</div>
+    <>
+      <Nav />
+
+      <div className='category-container'>
+        <div className='title-holder'>
+          <h1 className='title'>{category}</h1>
+        </div>
+
+        <div className='content'>
+          {data[0] &&
+            data[0].events.map((e, i) => (
+              <div key={i}>
+                <Link to={`/categories/${category}/${e.name}`}>
+                  <h1 className='size'>{e.name}</h1>
+                </Link>
+              </div>
+            ))}
+        </div>
+      </div>
+    </>
   );
 };
 

@@ -20,6 +20,16 @@ body {
     /* --neon-border-color: #08f; */
 }
 
+.catImg {
+    width: 260px;
+    padding: 30px;
+}
+
+.catImg:hover {
+    transform: rotate(15deg);
+    cursor: pointer;
+
+}
 
 h1 {
     font-size: 13rem;
@@ -158,6 +168,30 @@ h1:focus {
 .overlay.open li {
     animation: fadeInRight .5s ease forwards;
     animation-delay: .35s;
+}
+
+.size {
+    font-size: 4em;
+
+}
+
+.description {
+    width: 80%;
+
+    margin: auto;
+    font-size: 1.8em;
+    color: white;
+    margin-top: 60px;
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+.size:hover {
+    cursor: pointer;
 }
 
 .overlay.open li:nth-of-type(2) {
@@ -567,4 +601,12 @@ body {
 
 .confluence {
     z-index: 100 !important;
+}
+
+.desc {
+    height: 120vh;
+}
+
+.rule {
+    padding-bottom: 10px;
 }
