@@ -14,6 +14,8 @@ import NotAuth from './components/utils/NotAuth';
 import ProtectedRoute from './components/utils/ProtectedRoute';
 import Event from './components/Events/Event';
 import Events from './components/Events/Events';
+import Gallery from './components/Gallery/Gallery';
+
 const App = () => {
   const initState = useContext(Store);
   const [state, dispatch] = useReducer(rootReducer, initState);
