@@ -423,6 +423,7 @@ svg {
 .title {
     color: white;
     padding-top: 30px;
+    margin-top: 0 !important;
     padding-bottom: 20px;
     font-size: 3.5em;
 
