@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState, useRef } from 'react';
 import Store from '../../store/store';
-// import OauthLogin from '../utils/OauthLogin';
+ import OauthLogin from '../utils/OauthLogin';
 import Nav from '../utils/Nav';
 const HomePage = () => {
   const { state, dispatch } = useContext(Store);
@@ -21,6 +21,9 @@ const HomePage = () => {
         </div>
         <Nav />
       </div>
+      <div>
+        <OauthLogin />
+       </div> 
     </>
   );
 };
