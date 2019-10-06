@@ -1,0 +1,123 @@
+.main{
+    margin: 0;
+    padding: 0;
+    background: url(confluHomepagebg.png);
+    background-size: 100%;
+}
+.container{
+   
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    margin: 0;
+}
+.contain{
+    position: relative;
+    height: 100vw;
+    width: 100vw;
+    
+}   
+.rotator{
+    position: relative;
+    width: 50vw;
+    height: 50vw;
+    margin-left: 44%;
+}    
+
+#disc{
+    z-index: 3;
+    width: 170vh;
+    position: absolute;
+    margin-top: -32vh;
+    
+    animation: rotate 36s infinite linear;
+    
+}
+ @keyframes rotate{
+    from{
+        transform: rotate(0deg);
+        transform-origin: 51% 48.5% ;
+    }
+    to{
+        transform: rotate(360deg);
+        transform-origin: 50.9% 48.6% ;
+    }
+} 
+#conflutxt{
+    z-index: 4;
+    width: 210vh;
+    position: absolute;
+    margin-top: -24.5vh;
+    
+    margin-left: -6.6vw;
+    
+}
+#theme{
+    
+    width: 40%;
+    position: absolute;
+    top: 14vh;
+    left: 3vw;
+    animation: shake 5s infinite linear; 
+    
+    
+}
+@keyframes shake{
+    0%,100%{
+        transform: translateX(-40px) translateY(-40px);
+    }
+    33%{
+        transform: translateX(40px) translateY(-40px);
+    }
+    66%{
+        transform: translateX(0px) translateY(40px);
+    }
+}
+
+
+@media only screen and (max-width: 600px){
+    .rotator{
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        bottom: 0;
+        left: 0;
+        margin-left: 0;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        
+    }
+    #disc{
+        width: 90vh;
+        bottom: -24%;
+        
+    }
+    #conflutxt{
+        width: 120vh;
+        bottom: 0;
+        left : 50%;
+        transform: translateX(-44.5%) translateY(20%);               
+   
+    }
+    #theme{
+    
+        width: 40vh;
+        top: 0;
+        left : 50%;
+        transform: translateX(-50%);
+        
+    }
+    
+    @keyframes shake{
+    0%,100%{
+        transform: translateX(-60%) translateY(0px);
+    }
+    33%{
+        transform: translateX(-40%) translateY(0px);
+    }
+    66%{
+        transform: translateX(-50%) translateY(40px);
+    }
+}
+}
