@@ -1,43 +1,50 @@
-.contain{
-    background: url(teamConflu.png);
-    background-size: 100%;
-    background-attachment: fixed;
-  
+.con-contain {
+    background: url('./teamConflu.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
 
 }
-.cards{
+
+.con-cards {
     display: flex;
     flex-wrap: wrap;
-justify-content: center;
+    justify-content: center;
     width: 67%;
     margin-left: -2%;
 
 }
-.card{
+
+.con-card {
     width: 20.7vw;
     height: 20.7vw;
     margin: 30px;
-    
+
     background-color: #fff;
     transition: 0.5s;
     overflow: hidden;
     border-radius: 20px;
 }
 
-.image{
+.con-image {
     width: 100%;
     height: 100%;
     transition: 0.5s;
 
 }
-.image img{
+
+.con-image img {
     width: 100%;
     height: 100%;
 }
-.image, .top, .bottom{
+
+.con-image,
+.con-top,
+.con-bottom {
     position: relative;
 }
-.top{
+
+.con-top {
     left: -100%;
     top: -100%;
     width: 100%;
@@ -47,71 +54,112 @@ justify-content: center;
     transition: 0.5s;
     transition-delay: 1s;
 }
-.bottom{
+
+.con-bottom {
     right: -100%;
     bottom: 100%;
     width: 100%;
     height: 30%;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     transform: rotate(180deg);
     transition: 0.5s;
     transition-delay: 1s;
     color: #fff;
 }
-.top div, .bottom div{
+
+.con-top div,
+.con-bottom div {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     width: 100%;
     text-align: center;
 
-} 
-.card:hover .top{
+}
+
+.con-card:hover .top {
     left: 0;
     transform: rotate(0deg);
 }
-.card:hover .bottom{
+
+.con-card:hover .bottom {
     right: 0;
     transform: rotate(360deg);
 }
-.card:hover .image{
+
+.con-card:hover .image {
     transform: scale(2);
 }
-.heading{
+
+.con-heading {
     width: 60%;
     /* position: relative;
     left: 50%;
     transform: translateX(-50%); 
       */
-     
+
 }
-.title{
+
+.con-title {
     margin-left: 5%;
     margin-top: 2%;
 }
 
-@media only screen and (max-width: 600px){
-    .contain{
-       
+@media only screen and (max-width: 600px) {
+    .con-contain {
+
         background-size: cover;
         background-position: bottom right;
     }
-    .cards{
+
+    .con-cards {
         margin-left: 15%;
     }
-    .card{
+
+    .con-card {
         width: 60vw;
         height: 47.3vw;
     }
-    
-    .heading{
+
+    .con-heading {
         width: 90%;
     }
-    .title{
+
+    .con-title {
         margin-left: 5%;
         margin-top: 8%;
     }
-    .top h1{
+
+    .con-top h1 {
         font-size: 25px;
     }
+}
+
+.t-card {
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+.t-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.t-name {
+    color: white;
+    padding-top: 10px;
+    font-family: 'Open Sans';
+}
+
+.circle {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

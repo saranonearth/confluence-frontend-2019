@@ -9,7 +9,7 @@ import Error404 from './components/Error404/Error404';
 import Store from './store/store';
 import rootReducer from './reducers/rootReducer';
 import Categories from './components/Events/Categories';
-
+import Onboard from './components/utils/Onboard';
 import NotAuth from './components/utils/NotAuth';
 import ProtectedRoute from './components/utils/ProtectedRoute';
 import Event from './components/Events/Event';
@@ -32,7 +32,7 @@ const App = () => {
             <Route exact path='/' component={HomePage} />
             <Route path='/guestlectures' component={Guests} />
             <Route path='/contact' component={Contact} />
-
+            <Route path='/onboard' component={Onboard} />
             <Route path='/sponsors' component={Sponsors} />
             <Route path='/developers' component={Developer} />
             <Route path='/notautorized' component={NotAuth} />

@@ -1,42 +1,53 @@
-import React , {Components} from 'react';
+import React, { useEffect, useState } from 'react';
+import TeamConflu from './TeamConfluText.svg';
 import './contact.css';
-
-class Card extends React.Component{
-  render(){
-    return(
-        <div className="card">
-            <div className="image">
-                <img src="pg3.jpg" />
-            </div>
-            <div className="top">
-                <div>
-                    <h1>USER NAME</h1>
-                    <h2>President</h2>
-                </div>
-            </div>
-            <div className="bottom">
-                <div>
-                    <h3>
-                        Contact No- 1234567890
-                    </h3>
-                </div>
-            </div>
-        </div>
-    );
-  }
-}
-
+import axios from 'axios';
+import config from '../../config.json';
+import Nav from '../utils/Nav';
 const Contact = () => {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    const getEvents = async () => {
+      try {
+        const res = await axios.get(`${config.BASE}/teamConflu/`);
+
+        setData([...res.data.data]);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getEvents();
+  }, []);
+  console.log(data);
   return (
-    <><div className="contain">
-       <div className="heading"><img className="title" src="TeamConfluText.svg" /></div>
-      <div className="cards">
-        <Card />    
+    <div>
+      <Nav />
+      <div className='con-contain'>
+        <div className='con-heading'>
+          <img className='con-title' src={TeamConflu} />
+        </div>
+        <div className='con-cards'>
+          {/* card starts here */}
+          {data.map((e, i) =>
+            e.members.map((m, ind) => (
+              <div key={ind} className='t-card'>
+                <div>
+                  <img
+                    className='t-img circle'
+                    src={m.profilePic}
+                    alt='propic'
+                  />
+                </div>
+                <div>
+                  <p className='t-name'>{m.name}</p>
+                </div>
+              </div>
+            ))
+          )}
+        </div>
       </div>
-      </div> 
-    </>
+    </div>
   );
 };
 
 export default Contact;
-

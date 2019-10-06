@@ -26,9 +26,9 @@ const HomePage = () => {
         <div>
           <Nav />
         </div>
-        {/* <div>
+        <div>
           <OauthLogin />
-        </div> */}
+        </div>
       </div>
     </>
   );

@@ -31,9 +31,9 @@
 
 #disc {
     z-index: 3;
-    width: 170vh;
+    width: 155vh;
     position: absolute;
-    margin-top: -32vh;
+    margin-top: -25vh;
 
     animation: rotate 36s infinite linear;
 
@@ -57,7 +57,7 @@
     position: absolute;
     margin-top: -24.5vh;
 
-    margin-left: -6.6vw;
+    margin-left: -7.6vw;
 
 }
 
@@ -67,26 +67,11 @@
     position: absolute;
     top: 14vh;
     left: 3vw;
-    animation: shake 5s infinite linear;
+
 
 
 }
 
-@keyframes shake {
-
-    0%,
-    100% {
-        transform: translateX(-40px) translateY(-40px);
-    }
-
-    33% {
-        transform: translateX(40px) translateY(-40px);
-    }
-
-    66% {
-        transform: translateX(0px) translateY(40px);
-    }
-}
 
 
 @media only screen and (max-width: 600px) {
@@ -104,16 +89,16 @@
     }
 
     #disc {
-        width: 90vh;
+        width: 85vh;
         bottom: -24%;
 
     }
 
     #conflutxt {
-        width: 120vh;
+        width: 110vh;
         bottom: 0;
         left: 50%;
-        transform: translateX(-44.5%) translateY(20%);
+        transform: translateX(-43.5%) translateY(22%);
 
     }
 
