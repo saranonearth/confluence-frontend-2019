@@ -1,10 +1,10 @@
 
 import axios from 'axios'
-
+import config from '../config.json'
 export const auth = async (dispatch, tokenId, user) => {
     try {
 
-        const config = {
+        const configu = {
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -14,7 +14,7 @@ export const auth = async (dispatch, tokenId, user) => {
             idToken: tokenId
         }
 
-        const res = await axios.post('http://confluence-backend.appspot.com/api/user/login/', body, config)
+        const res = await axios.post(`${config.BASE}/user/login/`, body, configu)
         dispatch({
             type: 'LOGIN',
             payload: res.data.data

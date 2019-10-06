@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-const Event = () => {
-  const [data, setData] = useState([]);
+import Nav from '../utils/Nav';
+
+const Event = props => {
+  const event = props.match.params.event;
+  const [data, setData] = useState(null);
   useEffect(() => {
-    const getEvent = async () => {
+    const getEvents = async () => {
       try {
         const res = await axios.get(
-          'http://confluence-backend.appspot.com/api/events/desc/'
+          `http://confluence-backend.appspot.com/api/events/desc/?event=${event}`
         );
 
-        setData([...res.data.data]);
+        setData({ ...res.data.data });
       } catch (error) {
         console.log(error);
       }
@@ -17,7 +20,52 @@ const Event = () => {
     getEvents();
   }, []);
   console.log(data);
-  return <div>Event</div>;
+  return (
+    <>
+      <Nav />
+
+      <div className='category-container desc'>
+        <div className='title-holder'>
+          <h1 className='title'>{event}</h1>
+        </div>
+
+        {data == null ? (
+          <p>loading</p>
+        ) : (
+          <div className='description'>
+            {data.prize == null ? null : <p>Prize : Rs.{data.prize}</p>}
+            <br />
+            <p>Venue : {data.venue}</p>
+            <br />
+            <p>Description : {data.description}</p> <br />
+            <p>Rules:</p> <br />
+            {data.rules == undefined ? (
+              <p>loading</p>
+            ) : (
+              data.rules.length > 0 &&
+              data.rules.map((e, i) => (
+                <p key={i} className='rule'>
+                  {i + 1}. {e}
+                </p>
+              ))
+            )}
+            <br />
+            <p>Coordinators:</p> <br />
+            {data.coordinators == undefined ? (
+              <p>loading</p>
+            ) : (
+              data.coordinators.length > 0 &&
+              data.coordinators.map((e, i) => (
+                <p key={i} className='rule'>
+                  {i + 1}. {e}
+                </p>
+              ))
+            )}
+          </div>
+        )}
+      </div>
+    </>
+  );
 };
 
 export default Event;

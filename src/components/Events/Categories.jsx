@@ -1,17 +1,18 @@
 
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import config from '../../config.json';
 import Nav from '../utils/Nav';
-import Tape from '../../tapenew.png';
+
+import { List } from '../EventImg';
+import { Link } from 'react-router-dom';
 
 const Categories = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     const getEvents = async () => {
       try {
-        const res = await axios.get(
-          'http://confluence-backend.appspot.com/api/events/name/'
-        );
+        const res = await axios.get(`${config.BASE}/category/`);
 
         setData([...res.data.data]);
       } catch (error) {
@@ -31,15 +32,11 @@ const Categories = () => {
         </div>
 
         <div className='content'>
-          {data.length == 0 ? (
-            <p>loading</p>
-          ) : (
-            data.map(e => (
-              <div className='cat-div'>
-                <img className='tape' src={Tape} alt='tape' />
-              </div>
-            ))
-          )}
+          {List.map((e, i) => (
+            <Link to={`/categories/${e.eventName}`}>
+              <img className='catImg' src={e.img} alt={e.eventName} />
+            </Link>
+          ))}
         </div>
       </div>
     </>

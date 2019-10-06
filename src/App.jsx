@@ -12,6 +12,10 @@ import Categories from './components/Events/Categories';
 import Team from './components/utils/Team';
 import NotAuth from './components/utils/NotAuth';
 import ProtectedRoute from './components/utils/ProtectedRoute';
+import Event from './components/Events/Event';
+import Events from './components/Events/Events';
+import Gallery from './components/Gallery/Gallery';
+
 
 const App = () => {
   const initState = useContext(Store);
@@ -23,10 +27,14 @@ const App = () => {
         <BrowserRouter>
           <Switch>
 
+            <Route exact path='/categories' component={Categories} />
+            <Route path='/categories/:category/:event' component={Event} />
+            <Route path='/categories/:category' component={Events} />
+
             <Route exact path='/' component={HomePage} />
             <Route path='/guestlectures' component={Guests} />
             <Route path='/contact' component={Team} />
-            <ProtectedRoute path='/categories' component={Categories} />
+
             <Route path='/sponsors' component={Sponsors} />
             <Route path='/developers' component={Developers} />
             <Route path='/notautorized' component={NotAuth} />
