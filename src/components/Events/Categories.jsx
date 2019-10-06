@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import config from '../../config.json';
 import Nav from '../utils/Nav';
-import Tape from '../../tapenew.png';
 const Categories = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     const getEvents = async () => {
       try {
-        const res = await axios.get(
-          'http://confluence-backend.appspot.com/api/events/name/'
-        );
+        const res = await axios.get(`${config.BASE}/events/name/`);
 
         setData([...res.data.data]);
       } catch (error) {
@@ -34,7 +32,7 @@ const Categories = () => {
           ) : (
             data.map(e => (
               <div className='cat-div'>
-                <img className='tape' src={Tape} alt='tape' />
+                {/* <img className='tape' src={Tape} alt='tape' /> */}
               </div>
             ))
           )}

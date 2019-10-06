@@ -3,7 +3,7 @@ import axios from 'axios';
 const Event = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
-    const getEvent = async () => {
+    const getEvents = async () => {
       try {
         const res = await axios.get(
           'http://confluence-backend.appspot.com/api/events/desc/'
