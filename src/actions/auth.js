@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 12ca12c8eb795aad034a0db2572e9936134d1390
 import axios from 'axios'
 import config from '../config.json'
 export const auth = async (dispatch, tokenId, user) => {
