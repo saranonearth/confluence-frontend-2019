@@ -7,7 +7,7 @@ export const List = [{
         img: 'https://firebasestorage.googleapis.com/v0/b/hardy-mercury-229210.appspot.com/o/4.png?alt=media&token=ed0bf222-6a25-4427-8159-579128a85c98'
     },
     {
-        eventName: 'Dance and Music',
+        eventName: 'Music and Dance',
         img: 'https://firebasestorage.googleapis.com/v0/b/hardy-mercury-229210.appspot.com/o/5.png?alt=media&token=42339553-1433-41c8-a330-71ca1e739f4f'
     },
     {

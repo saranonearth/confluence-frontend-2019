@@ -30,7 +30,7 @@ const Events = props => {
     <>
       <Nav />
 
-      <div className='category-container'>
+      <div className='category-container events-s'>
         <div className='title-holder'>
           <h1 className='title'>{category}</h1>
         </div>
@@ -38,9 +38,12 @@ const Events = props => {
         <div className='content'>
           {data[0] &&
             data[0].events.map((e, i) => (
-              <div key={i}>
-                <Link to={`/categories/${category}/${e.name}`}>
-                  <h1 className='size'>{e.name}</h1>
+              <div className='e-div' key={i}>
+                <Link
+                  className='events'
+                  to={`/categories/${category}/${e.name}`}
+                >
+                  <p className='size '>{e.name}</p>
                 </Link>
               </div>
             ))}
