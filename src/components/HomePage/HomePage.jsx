@@ -1,12 +1,17 @@
-import React, { useContext, useEffect, useState, useRef } from 'react';
-import Store from '../../store/store';
- import OauthLogin from '../utils/OauthLogin';
+
+
+
+import React, { useContext } from 'react';
+
 import Nav from '../utils/Nav';
+import Store from '../../store/store';
+import OauthLogin from '../utils/OauthLogin';
 const HomePage = () => {
   const { state, dispatch } = useContext(Store);
   console.log(state);
   return (
     <>
+
       <div className='main'>
       <div className="container">
                 <div class="contain">
@@ -19,11 +24,17 @@ const HomePage = () => {
                         
                 </div>
         </div>
+
+      <div>
         <Nav />
       </div>
       <div>
         <OauthLogin />
+
        </div> 
+
+      </div>
+
     </>
   );
 };
