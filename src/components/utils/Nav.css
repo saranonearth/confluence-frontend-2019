@@ -172,7 +172,7 @@
                 font-weight: bold;
 
             }
-            ul li a{
+            ul li Link{
                 position: relative;
                 display: block;
                 text-decoration: none;
@@ -181,7 +181,7 @@
                 font-weight: bolder;
                 color: rgba(255, 255, 255, 0.3);
             }
-            ul li a::before{
+            ul li Link::before{
                 content: attr(data-text);
                 position: absolute;
                 top: 0;  
@@ -200,7 +200,7 @@
 
 
             }
-            ul li a:hover::before{
+            ul li Link:hover::before{
                 width: 100%;
             }
             @keyframes wave{
@@ -222,7 +222,7 @@
                     z-index: 8;
                    
                 }
-                ul li a{
+                ul li Link{
                     font-size: 4vh;
                 }
             }
