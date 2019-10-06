@@ -16,6 +16,7 @@ import Event from './components/Events/Event';
 import Events from './components/Events/Events';
 import Gallery from './components/Gallery/Gallery';
 
+
 const App = () => {
   const initState = useContext(Store);
   const [state, dispatch] = useReducer(rootReducer, initState);
@@ -25,9 +26,11 @@ const App = () => {
       <Store.Provider value={{ state, dispatch }}>
         <BrowserRouter>
           <Switch>
+
             <Route exact path='/categories' component={Categories} />
             <Route path='/categories/:category/:event' component={Event} />
             <Route path='/categories/:category' component={Events} />
+
             <Route exact path='/' component={HomePage} />
             <Route path='/guestlectures' component={Guests} />
             <Route path='/contact' component={Team} />
@@ -36,6 +39,7 @@ const App = () => {
             <Route path='/developers' component={Developers} />
             <Route path='/notautorized' component={NotAuth} />
             <Route component={Error404} />
+
           </Switch>
         </BrowserRouter>
       </Store.Provider>
