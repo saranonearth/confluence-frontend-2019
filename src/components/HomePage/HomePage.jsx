@@ -7,6 +7,7 @@ import Store from '../../store/store';
 
 import './HomePage.css';
 import { Redirect } from 'react-router-dom';
+import AboutUs from '../AboutUs/AboutUs';
 
 const HomePage = () => {
   const { state, dispatch } = useContext(Store);
@@ -28,6 +29,9 @@ const HomePage = () => {
 
         <div>
           <Nav />
+        </div>
+        <div>
+          <AboutUs />
         </div>
       </div>
     </>

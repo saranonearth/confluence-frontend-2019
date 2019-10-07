@@ -1,7 +1,8 @@
 .con-contain {
     background: url('./teamConflu.png');
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     height: auto;
 
 }
@@ -93,6 +94,7 @@
 
 .con-heading {
     width: 60%;
+    margin-left: 5%;
     /* position: relative;
     left: 50%;
     transform: translateX(-50%); 
