@@ -86,13 +86,15 @@
 
     }
     .title-head{
-        font-size: 80%;
+        font-size: 20px !important;
+        text-align: center;
+        padding-left: 4% !important;
     }
     .title-name{
         font-size :50%
     }
     .online-head{
-        font-size: 300%;
+        font-size: 300% !important;
     }
     .onlineimg{
         margin: 0;

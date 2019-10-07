@@ -35,14 +35,14 @@ a {
     position: fixed;
     top: 3vh;
     left: 0;
-    z-index: 2;
+    z-index: 10;
 }
 
 .outer-menu .checkbox-toggle {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 10;
     cursor: pointer;
     width: 60px;
     height: 60px;
@@ -69,6 +69,9 @@ a {
     pointer-events: auto;
     visibility: visible;
     transition: 1s;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
 }
 
 .outer-menu .checkbox-toggle:checked~.menu>div {
@@ -80,6 +83,8 @@ a {
 .outer-menu .checkbox-toggle:checked~.menu>div>div {
     opacity: 1;
     transition: opacity 0.4s ease 0.4s;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .outer-menu .checkbox-toggle:hover+.hamburger {

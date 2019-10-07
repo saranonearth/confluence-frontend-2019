@@ -30,7 +30,7 @@
 }
 
 #disc {
-    z-index: 3;
+    z-index: 15;
     width: 155vh;
     position: absolute;
     margin-top: -25vh;
@@ -52,7 +52,7 @@
 }
 
 #conflutxt {
-    z-index: 4;
+    z-index: 16;
     width: 210vh;
     position: absolute;
     margin-top: -24.5vh;
