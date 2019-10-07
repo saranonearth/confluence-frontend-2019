@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Nav from '../utils/Nav';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import config from '../../config.json';
 import sponsorHeading from "./SponsorsFont.svg";
@@ -24,10 +25,13 @@ const Sponsors = () => {
           <h1 className="online-head"> ONLINE PATNERS </h1>
           <div className="online-sponsors">
                {/* cards started for online patners */}
-              <div className="online-single">
-                <img className="online-img" src={online} alt="" />
-                <h2 className="online-name" > ONLINE-NAME </h2>
-              </div>
+              {/* change link to ref link */}
+              <Link to='./sponsors' >
+                <div className="online-single">
+                  <img className="online-img" src={online} alt="" />
+                  <h2 className="online-name" > ONLINENAME </h2>
+                </div>
+              </Link>
           </div> 
         </div> 
       </div> 

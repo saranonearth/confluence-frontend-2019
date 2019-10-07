@@ -76,6 +76,7 @@
     
     margin-top: -2%;
     font-size: 30px;
+    color: white;
 }
 @media only screen and ( max-width: 600px){
     .sponsor-head{
