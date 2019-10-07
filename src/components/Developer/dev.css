@@ -1,8 +1,9 @@
 .dev-contain {
     background: url('./developerPage.png');
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
-    height: 100vh;
+    background-attachment: fixed;
+    height: auto;
 }
 
 .dev-cards {
@@ -107,7 +108,7 @@
 .dev-heading {
     width: 60%;
     padding-top: 30px;
-    margin-left: 5%;
+    margin-left: 8%;
 
 }
 
