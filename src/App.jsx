@@ -1,7 +1,7 @@
 import React, { useContext, useReducer } from 'react';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import HomePage from './components/HomePage/HomePage';
-import AboutUs from './components/AboutUs/AboutUs';
+// import AboutUs from './components/AboutUs/AboutUs';
 import Developer from './components/Developer/Developer';
 import Guests from './components/Guests/Guests';
 import Contact from './components/Contact/Contact';
@@ -12,7 +12,7 @@ import rootReducer from './reducers/rootReducer';
 import Categories from './components/Events/Categories';
 import Onboard from './components/utils/Onboard';
 import NotAuth from './components/utils/NotAuth';
-import ProtectedRoute from './components/utils/ProtectedRoute';
+// import ProtectedRoute from './components/utils/ProtectedRoute';
 import Event from './components/Events/Event';
 import Events from './components/Events/Events';
 import Dashboard from './components/utils/Dashboard';

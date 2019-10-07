@@ -10,7 +10,8 @@ import { Redirect } from 'react-router-dom';
 import AboutUs from '../AboutUs/AboutUs';
 
 const HomePage = () => {
-  const { state, dispatch } = useContext(Store);
+  // const { state, dispatch } = useContext(Store);
+  const { state} = useContext(Store);
   console.log(state);
 
   if (state.user && !state.user.onBoard) return <Redirect to='/onboard' />;
