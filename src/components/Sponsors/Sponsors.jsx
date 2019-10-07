@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Nav from '../utils/Nav';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
-import config from '../../config.json';
+// import axios from 'axios';
+// import config from '../../config.json';
 import sponsorHeading from "./SponsorsFont.svg";
 import './sponsors.css';
 import title from "./bulb.jpg";

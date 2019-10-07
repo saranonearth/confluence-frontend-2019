@@ -10,7 +10,7 @@ const Event = props => {
   const category = props.match.params.category;
   const [data, setData] = useState(null);
   const [events, setEvents] = useState(null);
-  const [isReg, setReg] = useState(false);
+  // const [isReg, setReg] = useState(false);
   useEffect(() => {
     const getRegEvents = async () => {
       try {
@@ -81,8 +81,8 @@ const Event = props => {
 
   console.log(events);
 
-  const catcheck = events && events.find(e => e.name == category);
-  const evecheck = catcheck && catcheck.events.find(e => e.name == event);
+  const catcheck = events && events.find(e => e.name === category);
+  const evecheck = catcheck && catcheck.events.find(e => e.name === event);
 
   return (
     <>
@@ -129,7 +129,7 @@ const Event = props => {
               <span className='bold'>Rules : </span>
             </p>{' '}
             <br />
-            {data.rules == undefined ? (
+            {(data.rules === undefined || data.rules === null) ? (
               <p>loading</p>
             ) : (
               data.rules.length > 0 &&
@@ -145,7 +145,7 @@ const Event = props => {
               <span className='bold'>Coordinators : </span>
             </p>{' '}
             <br />
-            {data.coordinators == undefined ? (
+            {(data.coordinators === undefined || data.coordinators === null)? (
               <p>loading</p>
             ) : (
               data.coordinators.length > 0 &&

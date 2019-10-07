@@ -1,13 +1,13 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import Store from '../../store/store';
 import axios from 'axios';
-import Nav from '../utils/Nav';
+// import Nav from '../utils/Nav';
 import config from '../../config.json';
-import { readSync } from 'fs';
+// import { readSync } from 'fs';
 const Onboard = props => {
   const { state, dispatch } = useContext(Store);
-  const event = props.match.params.event;
-  const category = props.match.params.category;
+  // const event = props.match.params.event;
+  // const category = props.match.params.category;
   const [data, setData] = useState({
     college: '',
     contactNumber: '',
