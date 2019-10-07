@@ -4,7 +4,7 @@ import ConfluText from './smalldisk.png';
 import Theme from './homepagetheme.png';
 import Nav from '../utils/Nav';
 import Store from '../../store/store';
-
+import Categories from '../Events/Categories'
 import './HomePage.css';
 import { Redirect } from 'react-router-dom';
 import AboutUs from '../AboutUs/AboutUs';
@@ -34,6 +34,9 @@ const HomePage = () => {
         <div>
           <AboutUs />
         </div>
+        <div>
+          <Categories />
+          </div>
       </div>
     </>
   );

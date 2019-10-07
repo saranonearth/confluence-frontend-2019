@@ -2,7 +2,7 @@
     background: url('./aboutusbg.png');
     width: 100%;
     height: 100vh; 
-     overflow: hidden;
+     /* overflow: hidden; */
 }
 .aboutustext{
     width: 16%;
@@ -42,6 +42,7 @@
 .aboutuscontent{
 
     font-size: 28px;
+    font-family: 'PT Sans', sans-serif;
     color: cyan;
     width: 60vw;
     position: relative;
@@ -51,4 +52,36 @@
     padding: 19px;
     border-radius: 20px;
     margin-right: 0;
+}
+@media only screen and (max-width:600px){
+    .console-pic{
+        height: 50vh;
+        position: relative;
+        left: 13%;
+        top: 50vh;
+    }
+    .aboutuscontent{
+        width: 90vw;
+        font-size: 20px;
+        position: relative;
+        top: -80vh;
+        left: 5%;
+    }
+    .aboutustext{
+        width: 26%;
+       
+        position: relative;
+        top: 70vh;
+        left: 35%;
+    }
+    .aboutusscreen{
+       
+        width: 26vw;
+        height: 26vw;
+        position: relative;
+        top: 71vh;
+        left: 9%;
+    
+    }
+    
 }
