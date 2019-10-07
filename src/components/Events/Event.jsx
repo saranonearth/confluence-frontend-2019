@@ -46,7 +46,7 @@ const Event = props => {
 
       const body = JSON.stringify({});
       const res = await axios.put(
-        `http://confluence-backend.appspot.com/api/user/event/?category=Arts&event=ABSTRACT PAINTING`,
+        `http://confluence-backend.appspot.com/api/user/event/?category=${category}&event=${event}`,
         body,
         iconfig
       );
@@ -62,7 +62,7 @@ const Event = props => {
     <>
       <Nav />
 
-      <div className='category-container desc'>
+      <div className='m-container'>
         <div className='title-holder'>
           <h1 className='title'>{event}</h1>
         </div>

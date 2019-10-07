@@ -30,7 +30,7 @@ const Events = props => {
     <>
       <Nav />
 
-      <div className='category-container events-s'>
+      <div className='m-container'>
         <div className='title-holder'>
           <h1 className='title'>{category}</h1>
         </div>
