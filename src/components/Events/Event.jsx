@@ -9,7 +9,27 @@ const Event = props => {
   const event = props.match.params.event;
   const category = props.match.params.category;
   const [data, setData] = useState(null);
+  const [events, setEvents] = useState(null);
+  const [isReg, setReg] = useState(false);
   useEffect(() => {
+    const getRegEvents = async () => {
+      try {
+        const iconfig = {
+          headers: {
+            Authorization: state.token
+          }
+        };
+
+        const res = await axios.get(`${config.BASE}/user/event/`, iconfig);
+        setEvents([...res.data.data]);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    if (state.isAuth) {
+      getRegEvents();
+    }
     window.scrollTo(0, 0);
     const getEvents = async () => {
       try {
@@ -58,6 +78,12 @@ const Event = props => {
       console.log(error);
     }
   };
+
+  console.log(events);
+
+  const catcheck = events && events.find(e => e.name == category);
+  const evecheck = catcheck && catcheck.events.find(e => e.name == event);
+
   return (
     <>
       <Nav />
@@ -71,18 +97,38 @@ const Event = props => {
           <p className='loading'>Loading</p>
         ) : (
           <div className='description'>
-            <p className='register' onClick={register}>
-              Register
-            </p>
+            {evecheck && evecheck.name != null ? (
+              <h3 className='reg'>Already registered</h3>
+            ) : (
+              <p className='register' onClick={register}>
+                Register
+              </p>
+            )}
             {notif.map((e, i) => (
               <p className='status-text'>{e.data}</p>
             ))}
-            <p>Description : {data.description}</p> <br />
-            <p>Venue : {data.venue}</p>
-            {data.prize == null ? null : <p>Prize : Rs.{data.prize}</p>}
+            <p>
+              <span className='bold'>Description : </span>
+              {data.description}
+            </p>{' '}
+            <br />
+            <p>
+              {' '}
+              <span className='bold'>Venue : </span> {data.venue}
+            </p>
+            {data.prize == null ? null : (
+              <p>
+                {' '}
+                <span className='bold'>Prize : </span> Rs.{data.prize}
+              </p>
+            )}
             <br />
             <br />
-            <p>Rules:</p> <br />
+            <p>
+              {' '}
+              <span className='bold'>Rules : </span>
+            </p>{' '}
+            <br />
             {data.rules == undefined ? (
               <p>loading</p>
             ) : (
@@ -94,7 +140,11 @@ const Event = props => {
               ))
             )}
             <br />
-            <p>Coordinators:</p> <br />
+            <p>
+              {' '}
+              <span className='bold'>Coordinators : </span>
+            </p>{' '}
+            <br />
             {data.coordinators == undefined ? (
               <p>loading</p>
             ) : (

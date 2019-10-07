@@ -3,6 +3,8 @@ import Nav from './Nav';
 import Store from '../../store/store';
 import axios from 'axios';
 import config from '../../config.json';
+import { Redirect } from 'react-router-dom';
+
 const Dashboard = () => {
   const [data, setData] = useState([]);
   const { state } = useContext(Store);
@@ -15,9 +17,8 @@ const Dashboard = () => {
             Authorization: state.token
           }
         };
-        const res = await axios.get(`${config.BASE}/user/event/`, iconfig);
 
-        console.log(res);
+        const res = await axios.get(`${config.BASE}/user/event/`, iconfig);
         setData([...res.data.data]);
       } catch (error) {
         console.log(error);
@@ -26,10 +27,10 @@ const Dashboard = () => {
 
     getRegEvents();
   }, []);
+  if (!state.isAuth) return <Redirect to='/' />;
   return (
     <div>
       <Nav />
-
       <div className='m-container'>
         <div className='title-holder'>
           <h1 className='title'>Dashboard</h1>
