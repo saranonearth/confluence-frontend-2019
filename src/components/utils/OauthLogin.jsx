@@ -11,6 +11,9 @@ const OauthLogin = () => {
   };
   const authFail = () => {
     console.log('handle authfail');
+    dispatch({
+      type: 'LOGOUT'
+    });
   };
 
   const logout = () => {
@@ -33,7 +36,6 @@ const OauthLogin = () => {
           onSuccess={authSuccess}
           onFailure={authFail}
           isSignedIn={true}
-          cookiePolicy={'single_host_origin'}
         />
       )}
     </>

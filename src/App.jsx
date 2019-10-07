@@ -14,7 +14,7 @@ import NotAuth from './components/utils/NotAuth';
 import ProtectedRoute from './components/utils/ProtectedRoute';
 import Event from './components/Events/Event';
 import Events from './components/Events/Events';
-import Gallery from './components/Gallery/Gallery';
+import Dashboard from './components/utils/Dashboard';
 
 const App = () => {
   const initState = useContext(Store);
@@ -27,6 +27,7 @@ const App = () => {
           <Switch>
             <Route exact path='/categories' component={Categories} />
             <Route path='/categories/:category/:event' component={Event} />
+            <Route path='/dashboard' component={Dashboard} />
             <Route path='/categories/:category' component={Events} />
 
             <Route exact path='/' component={HomePage} />

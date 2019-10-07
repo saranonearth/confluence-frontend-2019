@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 const Categories = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
+    window.scrollTo(0, 0);
     const getEvents = async () => {
       try {
         const res = await axios.get(`${config.BASE}/category/`);
@@ -21,8 +22,8 @@ const Categories = () => {
   console.log(data);
   return (
     <>
+      {' '}
       <Nav />
-
       <div className='m-container'>
         <div className='title-holder'>
           <h1 className='title'>Categories</h1>

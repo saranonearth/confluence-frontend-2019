@@ -4,7 +4,7 @@ import ConfluText from './smalldisk.png';
 import Theme from './homepagetheme.png';
 import Nav from '../utils/Nav';
 import Store from '../../store/store';
-import OauthLogin from '../utils/OauthLogin';
+
 import './HomePage.css';
 import { Redirect } from 'react-router-dom';
 
@@ -28,9 +28,6 @@ const HomePage = () => {
 
         <div>
           <Nav />
-        </div>
-        <div>
-          <OauthLogin />
         </div>
       </div>
     </>

@@ -59,8 +59,25 @@ body {
 }
 
 .catImg {
-    width: 260px;
+    width: 400px;
     padding: 30px;
+}
+
+@media (max-width:800px) {
+
+    h1 {
+        font-size: 2em !important;
+        padding-top: 100px !important;
+        text-align: left !important;
+    }
+
+    .content {
+        padding-top: 30px !important;
+    }
+
+    .catImg {
+        width: 260px;
+    }
 }
 
 .catImg:hover {
@@ -477,4 +494,17 @@ button:hover {
     font-family: 'Open Sans';
     text-align: left;
     margin-bottom: 20px;
+}
+
+.details {
+    width: 90%;
+    margin: auto;
+    height: 100vh;
+    color: white;
+    font-family: 'Open Sans';
+    font-size: 2em;
+}
+
+.bold {
+    font-weight: bolder;
 }

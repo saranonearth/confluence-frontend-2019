@@ -21,5 +21,8 @@ export const auth = async (dispatch, tokenId, user) => {
     } catch (error) {
         // handle with react-alert
         console.log(error)
+        dispatch({
+            type: 'LOGOUT'
+        })
     }
 }
