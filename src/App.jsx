@@ -35,7 +35,7 @@ const App = () => {
             <Route path='/onboard' component={Onboard} />
             <Route path='/sponsors' component={Sponsors} />
             <Route path='/developers' component={Developer} />
-            <Route path='/notautorized' component={NotAuth} />
+            <Route path='/notauthorized' component={NotAuth} />
             <Route component={Error404} />
           </Switch>
         </BrowserRouter>

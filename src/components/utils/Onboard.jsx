@@ -3,8 +3,9 @@ import Store from '../../store/store';
 import axios from 'axios';
 import Nav from '../utils/Nav';
 import config from '../../config.json';
+import { readSync } from 'fs';
 const Onboard = props => {
-  const { state } = useContext(Store);
+  const { state, dispatch } = useContext(Store);
   const event = props.match.params.event;
   const category = props.match.params.category;
   const [data, setData] = useState({
@@ -12,10 +13,8 @@ const Onboard = props => {
     contactNumber: '',
     year: ''
   });
-
-  console.log(data);
-
-  const onChange = e => {
+  console.log(props);
+  const handleChange = e => {
     setData({
       ...data,
       [e.target.name]: e.target.value
@@ -31,12 +30,18 @@ const Onboard = props => {
 
     const body = JSON.stringify(data);
     try {
-      const res = await axios.post(
-        `${config.BASE}/user/event/?category=${category}&event=${event}`,
+      const res = await axios.put(
+        `${config.BASE}/user/onBoard/`,
         body,
-        config
+        iconfig
       );
       console.log(res);
+      if (res.data.success) {
+        dispatch({
+          type: 'ONBOARD',
+          payload: true
+        });
+      }
     } catch (error) {
       console.log(error);
     }
@@ -45,45 +50,47 @@ const Onboard = props => {
   const onSubmit = e => {
     e.preventDefault();
     onboard();
-
-    setData({
-      ...data,
-      college: '',
-      contactNumber: '',
-      year: ''
-    });
+    props.history.push('/');
+    console.log(data);
   };
   return (
     <>
-      <div className='category-container'>
+      <div className='o-container'>
         <div className='title-holder'>
           <h1 className='title'>Onboard</h1>
 
           <div className='form'>
+            <h2 className='subtitle'>Welcome to confluence'19</h2>
             <form onSubmit={onSubmit}>
+              <label htmlFor='contactNumber'>phone_no</label>
               <div className='form-item'>
-                <label htmlFor='college'>College:</label>
-                <br />
-                <input onChange={onChange} type='text' name='college' />
+                <input
+                  name='contactNumber'
+                  onChange={handleChange}
+                  type='text'
+                  maxLength='10'
+                  required='required'
+                />
               </div>
+              <label htmlFor='college'>college</label>
               <div className='form-item'>
-                <label onChange={onChange} htmlFor='contactNumber'>
-                  cContact Number:
-                </label>
-                <br />
-                <input type='text' name='contactNumber' maxLength='10' />
+                <input
+                  name='college'
+                  onChange={handleChange}
+                  type='text'
+                  required='required'
+                />
               </div>
+              <label htmlFor='year'>year</label>
               <div className='form-item'>
-                <label htmlFor='phone'>Phone No:</label>
-                <br />
-                <select onChange={onChange} name='year'>
+                <select name='year' onChange={handleChange} required='required'>
                   <option value='1st'>1st</option>
-                  <option value='2nd'>2nd</option>
-                  <option value='3rd'>3d</option>
+                  <option value='2nd'>2nd </option>
+                  <option value='3rd'>3rd</option>
                   <option value='4th'>4th</option>
                 </select>
               </div>
-              <button type='submit'>Submit</button>
+              <button>send</button>
             </form>
           </div>
         </div>

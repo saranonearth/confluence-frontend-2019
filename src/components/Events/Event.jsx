@@ -5,6 +5,7 @@ import Nav from '../utils/Nav';
 import config from '../../config.json';
 const Event = props => {
   const { state } = useContext(Store);
+  const [notif, setNotif] = useState([]);
   const event = props.match.params.event;
   const category = props.match.params.category;
   const [data, setData] = useState(null);
@@ -26,15 +27,32 @@ const Event = props => {
   console.log(data);
 
   const register = async () => {
+    setNotif([...notif, { data: 'Registering' }]);
+
+    setTimeout(() => {
+      setNotif([]);
+    }, 3000);
+    if (!state.isAuth) {
+      props.history.push('/notauthorized');
+    }
     console.log(state.token);
     console.log(category, event);
     try {
-      const res = await axios.put(
-        `http://confluence-backend.appspot.com/api/user/event/?category=Arts&event=ABSTRACT PAINTING`,
-        {
+      const iconfig = {
+        headers: {
           Authorization: state.token
         }
+      };
+
+      const body = JSON.stringify({});
+      const res = await axios.put(
+        `http://confluence-backend.appspot.com/api/user/event/?category=${category}&event=${event}`,
+        body,
+        iconfig
       );
+      if (res.data.success) {
+        setNotif([...notif, { data: 'Registered Successfully' }]);
+      }
       console.log(res);
     } catch (error) {
       console.log(error);
@@ -44,7 +62,7 @@ const Event = props => {
     <>
       <Nav />
 
-      <div className='category-container desc'>
+      <div className='m-container'>
         <div className='title-holder'>
           <h1 className='title'>{event}</h1>
         </div>
@@ -56,6 +74,9 @@ const Event = props => {
             <p className='register' onClick={register}>
               Register
             </p>
+            {notif.map((e, i) => (
+              <p className='status-text'>{e.data}</p>
+            ))}
             <p>Description : {data.description}</p> <br />
             <p>Venue : {data.venue}</p>
             {data.prize == null ? null : <p>Prize : Rs.{data.prize}</p>}

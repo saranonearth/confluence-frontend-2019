@@ -7,11 +7,31 @@
 
 body {
     overflow-x: hidden;
+    background-image: linear-gradient(to bottom right, #920563, #3d1369);
+
 }
 
 * {
     padding: 0;
     margin: 0;
+}
+
+.c-container {
+    width: 80%;
+    margin: auto;
+    color: white;
+    font-family: 'Open Sans';
+    font-size: 3em;
+    height: 100vh;
+}
+
+.status-text {
+    padding: 20px 0px;
+    font-weight: bolder;
+}
+
+.text {
+    padding-top: 100px;
 }
 
 .register {
@@ -106,7 +126,10 @@ a {
     text-decoration: none;
 }
 
-
+.m-container {
+    background-image: linear-gradient(to bottom right, #920563, #3d1369);
+    width: 100%;
+}
 
 .category-container {
     /* background: linear-gradient(to bottom, #b52e8d 30%, #673ab7 100%); */
@@ -115,8 +138,7 @@ a {
     /* background-repeat: no-repeat; */
     width: 100%;
 
-    height: 130vh;
-
+    height: auto;
 }
 
 .title-holder {
@@ -444,4 +466,15 @@ button {
 button:hover {
     background: rgb(228, 228, 228);
     cursor: pointer;
+}
+
+.o-container {
+    height: 100vh;
+}
+
+.subtitle {
+    color: white;
+    font-family: 'Open Sans';
+    text-align: left;
+    margin-bottom: 20px;
 }

@@ -6,10 +6,13 @@ import Nav from '../utils/Nav';
 import Store from '../../store/store';
 import OauthLogin from '../utils/OauthLogin';
 import './HomePage.css';
+import { Redirect } from 'react-router-dom';
 
 const HomePage = () => {
   const { state, dispatch } = useContext(Store);
   console.log(state);
+
+  if (state.user && !state.user.onBoard) return <Redirect to='/onboard' />;
   return (
     <>
       <div className='main'>

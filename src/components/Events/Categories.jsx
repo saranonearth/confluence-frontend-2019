@@ -23,7 +23,7 @@ const Categories = () => {
     <>
       <Nav />
 
-      <div className='category-container'>
+      <div className='m-container'>
         <div className='title-holder'>
           <h1 className='title'>Categories</h1>
         </div>

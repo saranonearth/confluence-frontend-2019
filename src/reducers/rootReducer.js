@@ -17,6 +17,7 @@ export default function rootReducer(state, action) {
                 token: payload,
                     user,
                     isAuth: true,
+                    onBoard: user.onBoard
             }
             case 'LOGOUT':
                 localStorage.removeItem('cToken')
@@ -25,7 +26,15 @@ export default function rootReducer(state, action) {
                         isAuth: false,
                         user: null
                 }
-                default:
-                    return state
+                case 'ONBOARD':
+                    return {
+                        ...state,
+                        user: {
+                            ...state.user,
+                            onBoard: payload
+                        }
+                    }
+                    default:
+                        return state
     }
 }
