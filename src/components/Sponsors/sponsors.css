@@ -1,40 +1,42 @@
-body{
-    background-color: palevioletred;
-    margin: 0;
-    padding: 0;
+.sponsor-container{
+    background-image: linear-gradient(to bottom right, #920563, #3d1369);
+    background-attachment: fixed;
+    height: auto;
+
+
 
 }
-#svg{
+.sponsor-head{
     width: 50%;
     margin-left: 25%;
     margin-top: 2%;
 }
 
 
-#head{
+.title-head{
     text-align: center; 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 150%;
 }
 
-#img{
+.title-img{
     width: 30vw;
     height: 30vw;
    margin-left: 35%;
 }
 
-#name{
-    margin-top: -2%;
+.title-name{
+   
 
     text-align: center;
-    font-size: 200% ;
+    font-size: 120% ;
 }
-#online1{
+.online-head{
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 150%;
+    font-size: 450%;
 }
-#images{
+/* #images{
     display: flex;
     flex-wrap: wrap;
 
@@ -53,36 +55,43 @@ body{
     text-align: center;
     font-size: 3vw;
 
-}
-.online-sponsor{
+} */
+.online-sponsors{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 
 }
-.single{
+.online-single{
     width: 30%;
     margin-left: 2%;
+    text-align: center;
 }
-.singe-image{
+.online-img{
     width:20vw;
     height: 20vw;
 }
-.single h2{
-    margin-left: 25%;
+.online-name{
+    
     margin-top: -2%;
     font-size: 30px;
 }
 @media only screen and ( max-width: 600px){
-    #head{
-        font-size: 100%;
+    .sponsor-head{
+        width: 80%;
+        margin-left: 10%;
+        padding-top: 10px;
+
     }
-    #name{
-        font-size :100%
+    .title-head{
+        font-size: 80%;
     }
-    #online1{
-        font-size: 100%;
+    .title-name{
+        font-size :50%
+    }
+    .online-head{
+        font-size: 300%;
     }
     .onlineimg{
         margin: 0;
@@ -91,21 +100,21 @@ body{
     }
         
     
-    .single{
+    .online-single{
         width: 45%;
     }
-    .singe-image{
+    .online-img{
         height: 40vw;
         width: 40vw;
     }
 
     
-    .single h2{
-        margin-left: 30%;
+    .online-name{
+       
         margin-top: -2%;
         font-size: 17px;
     }
-    #img{
+    .title-img{
         width: 50vw;
         height: 50vw;
        margin-left: 25%;
