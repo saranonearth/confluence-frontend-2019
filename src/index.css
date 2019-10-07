@@ -98,6 +98,9 @@ h1 {
     animation: flicker 1.5s infinite alternate;
 }
 
+.reg {
+    padding-bottom: 10px;
+}
 
 /* Animate neon flicker */
 @keyframes flicker {
