@@ -3,6 +3,7 @@ import Disk from './discElements.png';
 import ConfluText from './smalldisk.png';
 import Theme from './homepagetheme.png';
 import Nav from '../utils/Nav';
+import AboutUs from '../AboutUs/AboutUs'
 import Store from '../../store/store';
 
 import './HomePage.css';
@@ -29,6 +30,15 @@ const HomePage = () => {
         <div>
           <Nav />
         </div>
+<<<<<<< HEAD
+=======
+        <div>
+          <OauthLogin />
+        </div>
+        <div>
+          <AboutUs />
+          </div>
+>>>>>>> about us added, dev and conact updated
       </div>
     </>
   );

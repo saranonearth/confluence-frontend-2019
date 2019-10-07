@@ -2,7 +2,7 @@ import React, { useContext, useReducer } from 'react';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import HomePage from './components/HomePage/HomePage';
 import AboutUs from './components/AboutUs/AboutUs';
-import Developers from './components/utils/Developers';
+import Developer from './components/Developer/Developer';
 import Guests from './components/Guests/Guests';
 import Contact from './components/Contact/Contact';
 import Sponsors from './components/Sponsors/Sponsors';
@@ -33,14 +33,10 @@ const App = () => {
 
             <Route exact path='/' component={HomePage} />
             <Route path='/guestlectures' component={Guests} />
-<<<<<<< HEAD
+
             <Route path='/contact' component={Contact} />
             <Route path='/onboard' component={Onboard} />
-=======
-            <Route path='/contact' component={Team} />
-            <Route path='/aboutus' component={AboutUs} />
-            <ProtectedRoute path='/categories' component={Categories} />
->>>>>>> changing about us, need to edit
+            
             <Route path='/sponsors' component={Sponsors} />
             <Route path='/developers' component={Developer} />
             <Route path='/notauthorized' component={NotAuth} />
