@@ -13,6 +13,7 @@
     justify-content: center;
     width: 67%;
     margin-left: -2%;
+    padding-left: 40px;
 
 }
 
@@ -115,7 +116,10 @@
     }
 
     .con-cards {
-        margin-left: 15%;
+        margin-right: 0;
+        width: 100vw;
+       margin-left: 0;
+        padding-left: 0;
     }
 
     .con-card {

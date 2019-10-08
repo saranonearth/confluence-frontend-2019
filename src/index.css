@@ -79,6 +79,13 @@ body {
 }
 
 @media (max-width:800px) {
+    .event-t{
+        font-size: 5vw !important;
+    }
+    .title{
+        font-size: 13vw !important;
+        text-align: center !important;
+    }
 
     h1 {
         font-size: 3.5em !important;
@@ -240,7 +247,7 @@ a {
     padding-top: 30px;
     margin-top: 0 !important;
     padding-bottom: 20px;
-    font-size: 6.5em;
+    font-size: 10.5em ;
     font-family: 'lazer84';
     letter-spacing: 9px;
 }
