@@ -8,7 +8,7 @@
     scroll-behavior: smooth;
     scroll-snap-type: mandatory;
     scroll-snap-type: y mandatory;
-	scroll-snap-points-y: repeat(60vh);
+	scroll-snap-points-y: repeat(5vh);
 }
 .wd{
     scroll-behavior: smooth;

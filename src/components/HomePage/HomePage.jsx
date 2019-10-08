@@ -31,9 +31,7 @@ const HomePage = () => {
         
           <Nav />
         
-          <AboutUs />
-        
-          <Categories />
+          
           
       </div>
     </>

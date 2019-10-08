@@ -505,6 +505,7 @@ button {
     border-radius: 20px;
     background: white;
     color: #920563;
+    z-index:20;
 
 }
 

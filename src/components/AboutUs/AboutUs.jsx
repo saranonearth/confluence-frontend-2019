@@ -4,6 +4,7 @@ import frontScreen from "./frontScreen.png";
 import Console from "./console.png";
 import backGlow from "./pinkglow.png";
 import './AboutUs.css';
+import Nav from '../utils/Nav';
 const AboutUs = () => {
   return (
     <>
@@ -18,8 +19,9 @@ const AboutUs = () => {
       <p class="aboutuscontent">
       Confluence, the annual cultural Festival of NIT Kurukshetra is a cultural extravaganza beyond words, beyond description. Confluence is the coming together of free spirits, like-minded zealous youth and a celebration of culture of true artistic genius. Its urge to deliver the maximum is what makes it one of the most awaited cultural festival.
       </p>
-      
-    </div>  
+      <Nav />
+    </div> 
+
     </>
   );
 };
