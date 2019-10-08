@@ -28,7 +28,8 @@
     z-index: 2;
     height: 110vh;
     position: relative;
-    left: -510px;
+    left: 2vw;
+    top: 5vh;
     
 }
 .backglow{
@@ -60,7 +61,7 @@
         position: relative;
         left: 50%;
         transform: translateX(-50%);
-        top: 50vh;
+        top: 60vh;
     }
     .aboutuscontent{
         width: 90vw;

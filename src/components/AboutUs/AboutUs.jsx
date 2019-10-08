@@ -1,7 +1,7 @@
 import React from 'react';
 import aboutUsText from "./AboutusText.png";
 import frontScreen from "./frontScreen.png";
-import Console from "./console.png";
+import Console from "./AboutusConsiletext.png";
 import backGlow from "./pinkglow.png";
 import './AboutUs.css';
 import Nav from '../utils/Nav';
@@ -10,8 +10,8 @@ const AboutUs = () => {
     <>
     <div className="about-container wd">
       <div className="console">
-        <img className="aboutustext" src={aboutUsText} alt="aboutUsText" /> 
-        <img className="aboutusscreen" src={frontScreen} alt="frontScreen" />
+        
+       
         <img className="console-pic" src={Console} alt="Console" />
         
         <img className="backglow" src={backGlow} alt="backGlow" />
