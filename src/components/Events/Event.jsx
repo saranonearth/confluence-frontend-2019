@@ -66,7 +66,7 @@ const Event = props => {
 
       const body = JSON.stringify({});
       const res = await axios.put(
-        `http://confluence-backend.appspot.com/api/user/event/?category=${category}&event=${event}`,
+        `https://confluence-backend.appspot.com/api/user/event/?category=${category}&event=${event}`,
         body,
         iconfig
       );
