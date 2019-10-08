@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import Disk from './discElements.png';
-import ConfluText from './smalldisk.png';
-import Theme from './homepagetheme.png';
+import Disk from './discElements-min.png';
+import ConfluText from './smalldisk-min.png';
+import Theme from './homepagetheme-min.png';
 import Nav from '../utils/Nav';
 import Store from '../../store/store';
 import Categories from '../Events/Categories';

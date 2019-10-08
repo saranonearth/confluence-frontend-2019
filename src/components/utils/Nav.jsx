@@ -13,7 +13,7 @@ const Nav = () => {
     },
     {
       route: '/aboutus',
-      nav: 'AboutUs'
+      nav: 'About Us'
     },
     {
       route: '/categories',

@@ -14,8 +14,8 @@ const Sponsors = () => {
       Type: 'Title Sponsor',
       List: [
         {
-          Name: 'Hero',
-          ImageURL: 'https://i.ibb.co/tHZJPqr/hero-logo.png'
+          Name: 'Hero ',
+          ImageURL: 'https://i.ibb.co/LQcytnP/hero.png'
         }
       ]
     },
@@ -29,11 +29,73 @@ const Sponsors = () => {
       ]
     },
     {
+      Type: 'Charged By',
+      List: [
+        {
+          Name: 'APCPL',
+          ImageURL: 'https://i.ibb.co/K02FmYV/apcpl.png'
+        }
+      ]
+    },
+    {
       Type: 'Online Food Partner',
       List: [
         {
           Name: 'Swiggy',
           ImageURL: 'https://i.ibb.co/R9fh8tX/swiggy.png'
+        }
+      ]
+    },
+    {
+      Type: 'Education Partner',
+      List: [
+        {
+          Name: 'GATE Forum',
+          ImageURL: 'https://i.ibb.co/wwF17xn/download.jpg'
+        },
+        {
+          Name: 'Made Easy',
+          ImageURL: 'https://i.ibb.co/crQNcDf/0.png'
+        },
+        {
+          Name: 'GATE Academy',
+          ImageURL: 'https://i.ibb.co/dQP8Vq3/gateacademy.jpg'
+        }
+      ]
+    },
+    {
+      Type: 'Automobile Partner',
+      List: [
+        {
+          Name: 'Honda Cars',
+          ImageURL: 'https://i.ibb.co/HLZqgPQ/honda.png'
+        }
+      ]
+    },
+    {
+      Type: 'Gifting Partner',
+      List: [
+        {
+          Name: 'The Souled Store',
+          ImageURL: 'https://i.ibb.co/6nFH5jp/tss.jpg'
+        }
+      ]
+    },
+    {
+      Type: 'Knowledge Partner',
+      List: [
+        {
+          Name: 'Wiley',
+          ImageURL: 'https://i.ibb.co/WGJ4317/wiley.png'
+        }
+      ]
+    },
+    {
+      Type: 'Saving Partner',
+      List: [
+        {
+          Name: 'Grab On',
+          ImageURL: 'https://i.ibb.co/mNspTgL/grabon.jpg'
         }
       ]
     }
