@@ -5,6 +5,17 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    scroll-behavior: smooth;
+    scroll-snap-type: mandatory;
+    scroll-snap-type: y mandatory;
+	scroll-snap-points-y: repeat(5vh);
+}
+.wd{
+    scroll-behavior: smooth;
+			scroll-snap-align: start;
+            scroll-snap-stop: always;
+            overflow: hidden;
+
 }
 
 .container {
@@ -30,7 +41,7 @@
 }
 
 #disc {
-    z-index: 3;
+    z-index: 15;
     width: 155vh;
     position: absolute;
     margin-top: -25vh;
@@ -52,7 +63,7 @@
 }
 
 #conflutxt {
-    z-index: 4;
+    z-index: 16;
     width: 210vh;
     position: absolute;
     margin-top: -24.5vh;
@@ -82,15 +93,18 @@
         bottom: 0;
         left: 0;
         margin-left: 0;
-        align-items: center;
+        /* align-items: center;
         display: flex;
-        justify-content: center;
+        justify-content: center; */
 
     }
 
     #disc {
-        width: 85vh;
+        width: 160vw;
         bottom: -24%;
+        transform: translateX(-51%);
+        margin-left: -31vw;
+        
 
     }
 

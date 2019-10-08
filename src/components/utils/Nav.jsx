@@ -12,6 +12,10 @@ const Nav = () => {
       nav: 'Home'
     },
     {
+      route: '/aboutus',
+      nav: 'AboutUs'
+    },
+    {
       route: '/categories',
       nav: 'Events'
     },
@@ -51,7 +55,7 @@ const Nav = () => {
                   <Link to='/dashboard'>Dashboard</Link>
                 </li>
               ) : null}
-              <li>
+              <li className="login">
                 <OauthLogin />
               </li>
             </ul>

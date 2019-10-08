@@ -24,9 +24,9 @@ const Categories = () => {
     <>
       {' '}
       <Nav />
-      <div className='m-container'>
+      <div className='m-container wd'>
         <div className='title-holder'>
-          <h1 className='title'>Categories</h1>
+          <h1 className='title'>EVENTS</h1>
         </div>
 
         <div className='content'>

@@ -1,7 +1,7 @@
 import React, { useContext, useReducer } from 'react';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import HomePage from './components/HomePage/HomePage';
-// import AboutUs from './components/AboutUs/AboutUs';
+ import AboutUs from './components/AboutUs/AboutUs';
 import Developer from './components/Developer/Developer';
 import Guests from './components/Guests/Guests';
 import Contact from './components/Contact/Contact';
@@ -30,7 +30,7 @@ const App = () => {
             <Route path='/categories/:category/:event' component={Event} />
             <Route path='/dashboard' component={Dashboard} />
             <Route path='/categories/:category' component={Events} />
-
+            <Route path='/aboutus' component={AboutUs} />
             <Route exact path='/' component={HomePage} />
             <Route path='/guestlectures' component={Guests} />
 

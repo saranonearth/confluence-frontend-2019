@@ -4,7 +4,7 @@ import ConfluText from './smalldisk.png';
 import Theme from './homepagetheme.png';
 import Nav from '../utils/Nav';
 import Store from '../../store/store';
-
+import Categories from '../Events/Categories'
 import './HomePage.css';
 import { Redirect } from 'react-router-dom';
 import AboutUs from '../AboutUs/AboutUs';
@@ -18,7 +18,7 @@ const HomePage = () => {
   return (
     <>
       <div className='main'>
-        <div className='container'>
+        <div className='container wd'>
           <div class='home-container'>
             <div class='rotator'>
               <img id='disc' src={Disk} alt='disk' />
@@ -28,12 +28,11 @@ const HomePage = () => {
           </div>
         </div>
 
-        <div>
+        
           <Nav />
-        </div>
-        <div>
-          <AboutUs />
-        </div>
+        
+          
+          
       </div>
     </>
   );

@@ -2,6 +2,7 @@
     background-image: linear-gradient(to bottom right, #920563, #3d1369);
     background-attachment: fixed;
     height: auto;
+    overflow: hidden;
 
 
 
@@ -11,8 +12,31 @@
     margin-left: 25%;
     margin-top: 2%;
 }
+.sponsi-multi{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.sponsi-single img{
+    height: 14vw;
+    width: 14vw;
+}
+.sponsi-single h2{
+    text-align: center;
+    font-size: 2.5vw;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 
+}
+.sponsi-single{
+    padding: 1vw;
+  
+}
 
+.sponsors-cont h1{
+    font-size: 4vw !important;
+    text-align: center;
+}
 .title-head{
     text-align: center; 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -85,14 +109,38 @@
         padding-top: 10px;
 
     }
+    
+    .sponsi-single img{
+        height: 30vw;
+        width: 30vw;
+    }
+    .sponsi-single h2{
+        text-align: center;
+        font-size: 6.5vw;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    }
+    .sponsi-single{
+        padding: 4vw;
+      
+    }
+    
+    .sponsors-cont h1{
+        text-align: center !important;
+        font-size: 9vw !important;
+    }
+
     .title-head{
-        font-size: 80%;
+        font-size: 20px !important;
+        text-align: center;
+        padding-left: 4% !important;
     }
     .title-name{
         font-size :50%
     }
     .online-head{
-        font-size: 300%;
+        font-size: 300% !important;
     }
     .onlineimg{
         margin: 0;

@@ -26,23 +26,23 @@ a:active {
 }
 
 a {
-    font-family: 'lazer84';
-    letter-spacing: 3px;
+    font-family: 'Mansalva', cursive;
+    letter-spacing: 0px;
 }
 
 
 .outer-menu {
     position: fixed;
-    top: 3vh;
+    top: 1vh;
     left: 0;
-    z-index: 2;
+    z-index: 10;
 }
 
 .outer-menu .checkbox-toggle {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 10;
     cursor: pointer;
     width: 60px;
     height: 60px;
@@ -69,6 +69,9 @@ a {
     pointer-events: auto;
     visibility: visible;
     transition: 1s;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
 }
 
 .outer-menu .checkbox-toggle:checked~.menu>div {
@@ -80,6 +83,8 @@ a {
 .outer-menu .checkbox-toggle:checked~.menu>div>div {
     opacity: 1;
     transition: opacity 0.4s ease 0.4s;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .outer-menu .checkbox-toggle:hover+.hamburger {
@@ -241,26 +246,33 @@ ul li a:hover::before {
         background-position: 200px;
     }
 }
+.login button{
+    z-index: 21;
+}
 
 @media only screen and (max-width: 600px) {
 
     .outer-menu .menu>div {
-        margin-top: -60%;
+        margin-top: -68%;
     }
 
     ul {
         left: 2%;
         top: -10%;
-        z-index: 8;
+        z-index: 25;
 
+    }
+    ul li{
+        z-index:25;
     }
 
     ul li a {
-        font-size: 4vh;
+        
+        font-size: 3.2vh;
     }
 
     a {
-        font-family: 'lazer84' !important;
+        
         letter-spacing: 0px;
         font-size: 1em;
     }

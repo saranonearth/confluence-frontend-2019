@@ -2,13 +2,28 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
+    
+}
+html{
+    width: 100%;
+    min-height: 100vh;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-image: linear-gradient(to bottom right, #920563, #3d1369);
 }
 
 body {
     overflow-x: hidden;
+    min-height: 100vh;
+    height: auto;
     background-image: linear-gradient(to bottom right, #920563, #3d1369);
-
+    background-attachment: fixed;
+    background-size: 100%;
+    font-family: 'PT Sans', sans-serif;
+}
+#root{
+    min-height: 100vh;
+    height: auto;
 }
 
 * {
@@ -64,11 +79,19 @@ body {
 }
 
 @media (max-width:800px) {
+    .event-t{
+        font-size: 5vw !important;
+    }
+    .title{
+        font-size: 13vw !important;
+        text-align: center !important;
+    }
 
     h1 {
-        font-size: 2em !important;
+        font-size: 3.5em !important;
         padding-top: 100px !important;
         text-align: left !important;
+        padding-left: 5%;
     }
 
     .content {
@@ -91,7 +114,7 @@ h1 {
     font-weight: 200;
     /* font-style: italic; */
     color: #fff;
-    padding: 4rem 6rem 5.5rem;
+    padding: 4rem 3rem 5.5rem;
     /* border: 0.4rem solid #fff; */
     border-radius: 2rem;
     text-transform: uppercase;
@@ -149,6 +172,8 @@ a {
 .m-container {
     background-image: linear-gradient(to bottom right, #920563, #3d1369);
     width: 100%;
+    height: auto;
+    min-height: 100vh;
 }
 
 .category-container {
@@ -222,7 +247,7 @@ a {
     padding-top: 30px;
     margin-top: 0 !important;
     padding-bottom: 20px;
-    font-size: 3.5em;
+    font-size: 10.5em ;
     font-family: 'lazer84';
     letter-spacing: 9px;
 }
@@ -480,6 +505,7 @@ button {
     border-radius: 20px;
     background: white;
     color: #920563;
+    z-index:20;
 
 }
 
