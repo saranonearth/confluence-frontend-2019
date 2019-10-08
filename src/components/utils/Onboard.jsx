@@ -60,7 +60,7 @@ const Onboard = props => {
           <h1 className='title'>Onboard</h1>
 
           <div className='form'>
-            <h2 className='subtitle'>Welcome to confluence'19</h2>
+            <h2 className='subtitle'>Welcome to confluence'19 Remastered</h2>
             <form onSubmit={onSubmit}>
               <label htmlFor='contactNumber'>phone_no</label>
               <div className='form-item'>
