@@ -156,8 +156,9 @@
 
 .t-name {
     color: white;
+    font-size: 15px;
     padding-top: 10px;
-    font-family: 'Open Sans';
+    font-family: 'Open Sans' !important;
 }
 
 .circle {
