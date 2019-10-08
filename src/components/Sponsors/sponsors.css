@@ -23,19 +23,20 @@
 }
 .sponsi-single h2{
     text-align: center;
-    font-size: 2.5vw;
+    font-size: 1.5vw;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
 .sponsi-single{
-    padding: 1vw;
-  
+    padding: 3vw;
+    
 }
 
 .sponsors-cont h1{
     font-size: 4vw !important;
     text-align: center;
+    margin-bottom: 5px;
 }
 .title-head{
     text-align: center; 
@@ -116,7 +117,7 @@
     }
     .sponsi-single h2{
         text-align: center;
-        font-size: 6.5vw;
+        font-size: 4.5vw;
         color: white;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
     
