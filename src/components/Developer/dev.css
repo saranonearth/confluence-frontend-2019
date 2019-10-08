@@ -12,6 +12,7 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-left: -3%;
+    padding-left: 10%;
 
 
 }
@@ -139,6 +140,7 @@
     .dev-cards {
         justify-content: center;
         margin-left: 15%;
+        padding-left: 0;
     }
 
     .dev-card {

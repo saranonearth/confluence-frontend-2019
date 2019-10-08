@@ -90,7 +90,7 @@ const Event = props => {
 
       <div className='m-container'>
         <div className='title-holder'>
-          <h1 className='title'>{event}</h1>
+          <h1 className='event-t title'>{event}</h1>
         </div>
 
         {data == null ? (

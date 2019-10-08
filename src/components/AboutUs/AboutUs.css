@@ -28,7 +28,7 @@
     z-index: 2;
     height: 110vh;
     position: relative;
-    left: -410px;
+    left: -510px;
     
 }
 .backglow{
@@ -41,15 +41,16 @@
 }
 .aboutuscontent{
 
-    font-size: 28px;
+    font-size: 40px;
     font-family: 'PT Sans', sans-serif;
     color: cyan;
     width: 60vw;
-    position: relative;
+    position: absolute;
     left: 35vw;
-    top: -190vh;
-    border: 1px solid white;
-    padding: 19px;
+    top: 50vh;
+    transform: translateY(-50%);
+    
+    padding: 60px;
     border-radius: 20px;
     margin-right: 0;
 }
@@ -57,22 +58,27 @@
     .console-pic{
         height: 50vh;
         position: relative;
-        left: 13%;
+        left: 50%;
+        transform: translateX(-50%);
         top: 50vh;
     }
     .aboutuscontent{
         width: 90vw;
         font-size: 20px;
-        position: relative;
-        top: -80vh;
+        position: absolute;
+        top: 15vh;
+        transform: translateY(0%);
         left: 5%;
+        padding: 0;
     }
     .aboutustext{
         width: 26%;
        
         position: relative;
         top: 70vh;
-        left: 35%;
+        left: 50%;
+        transform: translateX(-50%);
+    
     }
     .aboutusscreen{
        
@@ -80,8 +86,11 @@
         height: 26vw;
         position: relative;
         top: 71vh;
-        left: 9%;
+        left: 11%;
     
+    }
+    .backglow{
+        opacity: 0;
     }
     
 }

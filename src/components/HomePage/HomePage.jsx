@@ -18,7 +18,7 @@ const HomePage = () => {
   return (
     <>
       <div className='main'>
-        <div className='container'>
+        <div className='container wd'>
           <div class='home-container'>
             <div class='rotator'>
               <img id='disc' src={Disk} alt='disk' />
@@ -28,15 +28,11 @@ const HomePage = () => {
           </div>
         </div>
 
-        <div>
+        
           <Nav />
-        </div>
-        <div>
-          <AboutUs />
-        </div>
-        <div>
-          <Categories />
-          </div>
+        
+          
+          
       </div>
     </>
   );
